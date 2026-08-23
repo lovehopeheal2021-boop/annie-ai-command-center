@@ -101,6 +101,82 @@
       color: #d97706;
     }
 
+    .whatsapp {
+      background: white;
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 6px 22px rgba(0,0,0,0.06);
+      border: 1px solid #edf0f5;
+    }
+
+    .whatsapp-summary {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #edf0f5;
+      margin-bottom: 8px;
+    }
+
+    .whatsapp-total {
+      font-size: 24px;
+      font-weight: 800;
+    }
+
+    .connection-status {
+      font-size: 11px;
+      color: #8a91a0;
+      background: #f1f3f7;
+      padding: 6px 9px;
+      border-radius: 10px;
+    }
+
+    .contact {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 0;
+      border-bottom: 1px solid #f0f2f6;
+    }
+
+    .contact:last-child {
+      border-bottom: none;
+    }
+
+    .contact-name {
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .contact-status {
+      color: #9299a7;
+      font-size: 11px;
+      margin-top: 3px;
+    }
+
+    .message-count {
+      min-width: 35px;
+      text-align: center;
+      padding: 7px 9px;
+      border-radius: 12px;
+      background: #f1f3f7;
+      color: #7b8290;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .manage-button {
+      width: 100%;
+      margin-top: 15px;
+      padding: 13px;
+      border: none;
+      border-radius: 13px;
+      background: #182033;
+      color: white;
+      font-weight: 700;
+      font-size: 13px;
+    }
+
     .agent {
       margin-top: 22px;
       background: #182033;
@@ -176,12 +252,6 @@
       font-size: 11px;
       color: #9299a7;
     }
-
-    @media (max-width: 500px) {
-      .cards {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
   </style>
 </head>
 
@@ -189,10 +259,7 @@
 
   <div class="header">
     <h1>🧠 Annie AI Command Center</h1>
-
-    <p>
-      Your personal digital control center
-    </p>
+    <p>Your personal digital control center</p>
 
     <div class="status">
       ● System online
@@ -201,7 +268,6 @@
 
 
   <h2 class="section-title">Today's Overview</h2>
-
 
   <div class="cards">
 
@@ -213,15 +279,13 @@
       <div class="growth attention">3 need attention</div>
     </div>
 
-
     <div class="card">
       <div class="icon">💬</div>
       <h3>WhatsApp</h3>
-      <div class="number">5</div>
+      <div class="number">—</div>
       <div class="description">Selected contacts</div>
-      <div class="growth positive">2 important</div>
+      <div class="growth">Not connected</div>
     </div>
-
 
     <div class="card">
       <div class="icon">🎵</div>
@@ -231,7 +295,6 @@
       <div class="growth positive">↑ 18% today</div>
     </div>
 
-
     <div class="card">
       <div class="icon">🌐</div>
       <h3>Website</h3>
@@ -240,7 +303,6 @@
       <div class="growth positive">↑ 12%</div>
     </div>
 
-
     <div class="card">
       <div class="icon">📱</div>
       <h3>Apps</h3>
@@ -248,7 +310,6 @@
       <div class="description">New users</div>
       <div class="growth positive">↑ 7 today</div>
     </div>
-
 
     <div class="card">
       <div class="icon">🤖</div>
@@ -261,34 +322,99 @@
   </div>
 
 
-  <h2 class="section-title">🤖 AI Briefing</h2>
+  <h2 class="section-title">💬 WhatsApp Activity</h2>
 
+  <div class="whatsapp">
+
+    <div class="whatsapp-summary">
+      <div>
+        <div class="whatsapp-total">—</div>
+        <div class="description">Total selected messages</div>
+      </div>
+
+      <div class="connection-status">
+        Not connected
+      </div>
+    </div>
+
+
+    <div class="contact">
+      <div>
+        <div class="contact-name">Desi</div>
+        <div class="contact-status">Waiting for connection</div>
+      </div>
+
+      <div class="message-count">—</div>
+    </div>
+
+
+    <div class="contact">
+      <div>
+        <div class="contact-name">CMA</div>
+        <div class="contact-status">Waiting for connection</div>
+      </div>
+
+      <div class="message-count">—</div>
+    </div>
+
+
+    <div class="contact">
+      <div>
+        <div class="contact-name">Miss Castel</div>
+        <div class="contact-status">Waiting for connection</div>
+      </div>
+
+      <div class="message-count">—</div>
+    </div>
+
+
+    <div class="contact">
+      <div>
+        <div class="contact-name">Jean</div>
+        <div class="contact-status">Waiting for connection</div>
+      </div>
+
+      <div class="message-count">—</div>
+    </div>
+
+
+    <div class="contact">
+      <div>
+        <div class="contact-name">Louise</div>
+        <div class="contact-status">Waiting for connection</div>
+      </div>
+
+      <div class="message-count">—</div>
+    </div>
+
+
+    <button class="manage-button">
+      ⚙️ Manage Selected Contacts
+    </button>
+
+  </div>
+
+
+  <h2 class="section-title">🤖 AI Briefing</h2>
 
   <div class="agent">
 
     <div class="agent-header">
-
       <h2>Good evening, Annie.</h2>
 
       <div class="agent-badge">
         AI AGENT
       </div>
-
     </div>
 
-
     <p>
-      You have 12 new emails, but only 3 appear important.
-      Your selected WhatsApp contacts sent 5 messages.
-      TikTok recorded 1,284 profile views today.
-      Your website received 96 visitors.
+      Your dashboard is online. WhatsApp is configured to monitor
+      selected contacts only once an approved data connection is available.
     </p>
 
-
     <div class="priority">
-      🔴 <strong>Priority:</strong>
-      A message appears to require your attention.
-      Your AI agent will eventually be able to summarize it for you.
+      🔐 <strong>Privacy:</strong>
+      Only the contacts you select will be included in the WhatsApp dashboard.
     </div>
 
   </div>
@@ -296,17 +422,11 @@
 
   <h2 class="section-title">⚡ Quick Actions</h2>
 
-
   <div class="quick-actions">
 
     <div class="action">
-      <strong>📧 Important Emails</strong>
-      <span>Review messages that matter</span>
-    </div>
-
-    <div class="action">
       <strong>💬 Selected WhatsApp</strong>
-      <span>View permitted conversations</span>
+      <span>View permitted contacts</span>
     </div>
 
     <div class="action">
@@ -315,15 +435,20 @@
     </div>
 
     <div class="action">
+      <strong>📧 Important Emails</strong>
+      <span>Review messages that matter</span>
+    </div>
+
+    <div class="action">
       <strong>🤖 Ask AI Agent</strong>
-      <span>Get a summary of your day</span>
+      <span>Get your daily briefing</span>
     </div>
 
   </div>
 
 
   <div class="footer">
-    Annie AI Command Center · Prototype 2.0
+    Annie AI Command Center · Prototype 3.0
   </div>
 
 </body>
